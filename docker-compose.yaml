@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_container_sample_ms
+    ports:
+      - "27018:27018"
+    networks:
+      - "sample-ms-network"
+
+  redis:
+    image: redis:latest
+    container_name: redis_container_sample_ms
+    ports:
+      - "6378:6378"
+    networks:
+      - "sample-ms-network"
+networks:
+  sample-ms-network:
+    driver: bridge
