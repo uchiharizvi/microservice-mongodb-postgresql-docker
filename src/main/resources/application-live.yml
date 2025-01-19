@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://kavish2:Pirateking@1@flickstreamcluster01.6iqkd.mongodb.net/flickstream_user?retryWrites=true&w=majority&appName=FlickStreamCluster01
+
+  redis:
+    host: localhost
+    port: 6378
+    timeout: 2000
+

@@ -1,4 +1,3 @@
-version: '3.9'
 services:
   mongo:
     image: mongo:latest
@@ -6,8 +5,8 @@ services:
     ports:
       - "27018:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=kavish
-      - MONGO_INITDB_ROOT_PASSWORD=kavish
+      - MONGO_INITDB_ROOT_USERNAME=kavish.r
+      - MONGO_INITDB_ROOT_PASSWORD=5okwJRZDoKcNdXQn
       - MONGO_INITDB_DATABASE=user
     networks:
       - "user-network"

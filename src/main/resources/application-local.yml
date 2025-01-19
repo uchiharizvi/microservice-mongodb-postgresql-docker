@@ -4,6 +4,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://kavish:kavish@localhost:27018/user?authSource=admin
+
   redis:
     host: localhost
     port: 6378
