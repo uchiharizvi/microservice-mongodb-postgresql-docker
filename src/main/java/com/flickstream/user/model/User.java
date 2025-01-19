@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.flickstream.user.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

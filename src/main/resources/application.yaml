@@ -1,8 +1,11 @@
+server:
+  port: 8081
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27018/sampledata
+      uri: mongodb://kavish:kavish@localhost:27018/user?authSource=admin
   redis:
     host: localhost
     port: 6378
+    timeout: 2000
 
