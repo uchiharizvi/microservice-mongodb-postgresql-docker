@@ -18,15 +18,15 @@ public class UserController {
         return userService.registerUser(user);
     }
 
-//    @PostMapping("/authenticate")
-//    public String authenticate(@RequestBody String email, @RequestParam String password) {
-//        Optional<User> user = userService.authenticate(email, password);
-//        return user.isPresent()?"Login successful" : "Invalid credentials";
-//    }
+    @PostMapping("/authenticate")
+    public String authenticate(@RequestBody String email, @RequestParam String password) {
+        Optional<User> user = userService.authenticate(email, password);
+        return user.isPresent()?"Login successful" : "Invalid credentials";
+    }
 
     @GetMapping("/{email}")
-    public User getUser(@RequestBody User user) {
-        return userService.registerUser(user);
+    public User getUser(@PathVariable String email) {
+        return userService.getUser(email).orElse(null);
     }
 
 }

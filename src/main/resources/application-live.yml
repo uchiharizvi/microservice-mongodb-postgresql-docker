@@ -1,12 +1,19 @@
 server:
   port: 8081
+mongo:
+  data:
+    app: FlickStreamCluster01
+    user: kavish.r
+    pass: 5okwJRZDoKcNdXQn
+#    user: kavish2
+#    pass: Pirateking%401
+    cluster: flickstreamcluster01.6iqkd
+    database:
+      name: flickstream_user
+    collection: user_data
+
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://kavish2:Pirateking@1@flickstreamcluster01.6iqkd.mongodb.net/flickstream_user?retryWrites=true&w=majority&appName=FlickStreamCluster01
-
-  redis:
-    host: localhost
-    port: 6378
-    timeout: 2000
-
+      uri: mongodb+srv://${mongo.data.user}:${mongo.data.pass}@${mongo.data.cluster}.mongodb.net/${mongo.data.database.name}?retryWrites=true&w=majority&appName=${mongo.data.app}
+      database: ${mongo.data.database.name}
