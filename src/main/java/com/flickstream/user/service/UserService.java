@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface UserService {
     User registerUser(UserRegistrationRequest userRegistrationRequest);
-//    Optional<User> authenticate(String email, String password);
+    boolean loginUser(String email, String password);
 //    Optional<User> getUser(String email);
 }

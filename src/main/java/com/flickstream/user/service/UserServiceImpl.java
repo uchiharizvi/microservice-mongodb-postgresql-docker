@@ -7,6 +7,9 @@ import com.flickstream.user.model.dto.UserRegistrationRequest;
 import com.flickstream.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -22,6 +25,12 @@ public class UserServiceImpl implements UserService{
         user.setEmail(userRegistrationRequest.getEmail());
         user.setPassword(userRegistrationRequest.getPassword());
         return userRepository.save(user);
+    }
+
+    @Override
+    public boolean loginUser(String email, String password) {
+        Optional<User> user = userRepository.findByEmail(email);
+        return user.isPresent() && user.get().getPassword().equals(password);
     }
 
 //    @Override
