@@ -1,3 +1,4 @@
+/*
 package com.flickstream.user.controller;
 
 import com.flickstream.user.model.User;
@@ -35,7 +36,7 @@ public class HealthCheckController {
             //Test Mongo DB
             UserProfile profile = new UserProfile();
             profile.setId(UUID.randomUUID().toString());
-            profile.setName("Test User");
+            profile.set("Test User");
             profile.setPhone("1234567890");
             userProfileRepository.save(profile);
 
@@ -46,3 +47,4 @@ public class HealthCheckController {
 
     }
 }
+*/

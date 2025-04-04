@@ -2,17 +2,17 @@ package com.flickstream.user.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 @Document(collection = "user_profiles")
 @Getter
 @Setter
 public class UserProfile {
-    @MongoId
+    @Id
     private String id;
-
-    private String name;
-    private String phone;
-
+    private String userId; //reference userid from postgresql
+    private String fullName;
+    private String bio;
+    private String profileImageURL;
 }
