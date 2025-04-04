@@ -1,3 +1,4 @@
+/*
 package com.flickstream.user.service;
 
 //import com.flickstream.user.data.RedisCache;
@@ -42,3 +43,4 @@ public class UserServiceImpl implements UserService{
         return Optional.ofNullable(userRepository.findByEmail(email));
     }
 }
+*/

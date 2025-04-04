@@ -1,3 +1,4 @@
+/*
 package com.flickstream.user.configuration;
 
 import org.springframework.cache.annotation.EnableCaching;
@@ -21,3 +22,4 @@ public class RedisConfig {
         return redisTemplate;
     }
 }
+*/

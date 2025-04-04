@@ -1,23 +1,19 @@
 package com.flickstream.user.model;
 
-import lombok.Data;
-import lombok.Value;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Document(collection="${mongo.data.collection}")
+@Entity
+@Table(name = "users")
+@Getter
+@Setter
 public class User {
     @Id
-    private String id;
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String email;
     private String password;
 
-    public User(String id, String name, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
 }
