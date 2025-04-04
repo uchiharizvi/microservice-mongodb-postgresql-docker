@@ -58,3 +58,9 @@ created_at TIMESTAMP,
   ...
 }
 ```
+
+## Docker Commands for PostgreSQL
+1. `docker ps `-- to list all the running containers
+2. `docker exec -it <container_name> psql -U username -d dbName` -- login to psql terminal
+3. `\c dbName;` -- switch to database
+4. `\q` -- exit terminal
